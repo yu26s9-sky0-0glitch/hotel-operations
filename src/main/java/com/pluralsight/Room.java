@@ -50,12 +50,12 @@ public class Room {
         return !isDirty() && !isOccupied();
     }
     public void checkIn() {
-        dirty = true;
-        occupied = true;
+        this.dirty = true;
+        this.occupied = true;
     }
     public void checkOut() {
-        occupied = false;
-        cleanRoom();
+        this.occupied = false;
+        this.dirty = true;
     }
     public void cleanRoom() {
         dirty = false;
